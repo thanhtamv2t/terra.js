@@ -1,4 +1,10 @@
-import { bech32 } from 'bech32';
+import { bech32 as b32 } from 'bech32';
+
+let bech32 = b32;
+
+if (!bech32) {
+  bech32 = require('bech32');
+}
 
 /** `terra-` prefixed account address */
 export type AccAddress = string;
